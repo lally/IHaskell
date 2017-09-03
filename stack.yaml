@@ -14,7 +14,14 @@ packages:
     - ./ihaskell-display/ihaskell-plot
     - ./ihaskell-display/ihaskell-static-canvas
     - ./ihaskell-display/ihaskell-widgets
-resolver: lts-9.3
+    - location:
+        git: https://github.com/gtk2hs/gtk2hs.git
+        commit: ce1b572e1d3999db897ace898d594560593fcae5
+      subdirs:
+        - tools
+      extra-dep: true
+resolver: nightly-2017-09-04
+allow-newer: true
 extra-deps: []
 flags:
   ihaskell:
